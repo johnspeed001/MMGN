@@ -1,0 +1,35 @@
+# Local environments, editor state, and Python caches
+.DS_Store
+.idea/
+.vscode/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.cache/
+.matplotlib/
+.pytest_cache/
+
+# Local datasets (the existing simulated fixtures remain versionable)
+/data/raw/
+/data/current/
+/data/processed/
+
+# Generated experiment artifacts
+/outputs/training/
+/outputs/latent/*
+# Preserve the two log files that were already versioned.
+!/outputs/latent/latentSweep.log
+!/outputs/latent/latent_offline.log
+/outputs/chapter2/
+/outputs/chapter2_quick_check/
+/outputs/chapter3/
+/outputs/matlab/
+/outputs/figures/
+# Keep extra local verification outputs out of version control.
+/outputs/simulate/check_eval/
+# outputs/simulate contains previously versioned reference runs and reports.
+/docs/thesis/**/formatted_outputs/
+
+# Office lock files
+~$*.docx

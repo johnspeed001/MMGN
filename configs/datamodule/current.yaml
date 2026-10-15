@@ -1,0 +1,10 @@
+_target_: data_interface.DataModule
+data_dir: data/current/bohai.npz
+model_name: LNO
+pre_method: [minmax, minmax]
+reduce_dim: [[], [0]]
+task: task1
+sampling_rate: [0.05, 0.05]
+n_train_val: [585, 72]
+b_train_val: [1, 1]
+num_workers: 4

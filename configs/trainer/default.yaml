@@ -1,0 +1,7 @@
+accelerator: gpu
+devices: 1
+precision: 16-mixed
+gradient_clip_val: 0.999
+detect_anomaly: False
+check_val_every_n_epoch: 40 # 40轮验证一次
+max_epochs: 200

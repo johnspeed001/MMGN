@@ -1,0 +1,12 @@
+# configs/model/LNO.yaml
+_target_: model_interface.LNOModule
+params_model:
+  name: LNO
+  in_ch: 2          # obs + mask
+  dim_out: 1
+  width: 64
+  modes1: 4
+  modes2: 4
+  save_dir: ${hydra:run.dir}
+params_optim: ${optim}
+params_scheduler: ${scheduler}

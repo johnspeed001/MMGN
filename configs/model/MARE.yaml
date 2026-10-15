@@ -1,0 +1,17 @@
+# configs/model/MARE.yaml
+_target_: model_interface.BaselineModule
+
+params_model:
+  name: MARE
+  dim_in: 3            # 走 Baseline dataloader 有 (x,y,t)，填 3
+  dim_hidden: 256
+  dim_out: 1
+  num_layers_local: 4
+  num_layers_global: 2
+  num_bands: 8
+  global_low_bands: 3
+  use_siren: true
+  save_dir: ${hydra:run.dir}
+
+params_optim: ${optim}
+params_scheduler: ${scheduler}

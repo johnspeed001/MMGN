@@ -1,0 +1,13 @@
+defaults:
+  - _self_
+  - hydra: default
+  - datamodule: current # gst sst
+  - model: MMGNet # ResMLP SirenNet FFN_P FFN_G MMGNet
+  - optim: default # 优化器
+  - scheduler: default  # 学习率调度器
+  - callback: default # 保存best。pt
+  - logger: wandb # 日志记录
+  - trainer: default # 训练器设置
+
+seed: 3407 # 随机种子
+

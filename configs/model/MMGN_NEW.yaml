@@ -1,0 +1,28 @@
+# configs/model/MMGN_NEW.yaml
+_target_: model_interface.MMGNetModule
+params_data: ${datamodule}
+
+params_model:
+  name: MMGN_NEW
+  in_size: 2
+  hidden_size: 300
+  latent_size: 128
+  latent_init: zeros
+  out_size: 1
+  n_layers: 7
+  input_scale: 370.0
+  alpha: 1.0
+  filter: Mixed
+  use_layernorm: true
+  layer_scale_init: 0.01
+  droppath: 0.1
+  use_film: true
+  latent_dropout: 0.1
+  latent_proj: 256
+  mix_use_gabor: true
+  mix_use_fourier: true
+  mix_use_linear: true
+  save_dir: ${hydra:run.dir}
+
+params_optim: ${optim}
+params_scheduler: ${scheduler}
